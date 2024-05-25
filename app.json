@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "citycode",
+    "slug": "citycode",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyD85hbVF60EV2xHQJlwSs1IGYTeWTimuo0"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB2Z25RK693jT1MBXKxz9COlO3ApOU8V3Q"
+        }
+      },
+      "permissions": ["android.permission.RECORD_AUDIO"],
+      "package": "com.manasau.citycode"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "e8d27408-9c56-4468-a047-7ed66b813419"
+      }
+    }
+  }
+}

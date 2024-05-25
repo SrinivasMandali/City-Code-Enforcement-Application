@@ -1,0 +1,303 @@
+import { Dimensions, Platform, StatusBar, StyleSheet } from "react-native";
+import colors from "../../../constants/colors";
+import {
+  moderateScale,
+  scale,
+  textScale,
+  verticalScale,
+} from "../../../constants/resposiveSizes";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.primary,
+  },
+  headerStyle: {
+    height: verticalScale(60),
+    marginTop: Platform.OS === "ios" ? verticalScale(20) : verticalScale(40),
+    backgroundColor: colors.primary,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: scale(24),
+  },
+  cityTextStyle: {
+    flex: 1,
+  },
+  city: {
+    textAlign: "center",
+    fontSize: textScale(20),
+    fontWeight: "bold",
+    color: colors.black,
+  },
+  searchBarCont: {
+    position: "absolute",
+    top: "19%",
+    width: "100%",
+    flexDirection: "row",
+    paddingHorizontal: scale(16),
+  },
+  textInputContainer: {
+    backgroundColor: colors.primary,
+    width: "95%",
+    height: moderateScale(34),
+    borderRadius: moderateScale(55),
+    alignSelf: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
+  },
+  textInput: {
+    fontSize: textScale(15),
+    backgroundColor: colors.white,
+    color: colors.black,
+    borderRadius: moderateScale(55),
+    color: colors.black,
+    fontFamily: "C-Regular",
+  },
+  twoInputLayout: {
+    height: moderateScale(74),
+    marginHorizontal: scale(24),
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  chooseFromMaps: {
+    marginHorizontal: scale(24),
+    marginTop: verticalScale(20),
+  },
+  chFM: {
+    fontSize: textScale(14),
+    fontFamily: "C-Bold",
+    color: colors.black,
+    paddingLeft: scale(5),
+    fontWeight: "700",
+  },
+  mapStyle: {
+    height: moderateScale(345),
+    borderRadius: moderateScale(12),
+    marginTop: verticalScale(10),
+  },
+  violationContainer: {
+    paddingVertical: moderateScale(12),
+    backgroundColor: colors.white,
+    marginTop: verticalScale(5),
+    borderRadius: moderateScale(18),
+    paddingHorizontal: scale(16),
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  chooseStyle: {
+    fontSize: textScale(14),
+    fontFamily: "C-Bold",
+    color: "#807f7f",
+    paddingLeft: scale(5),
+    fontWeight: "700",
+  },
+  bigContainer: {
+    padding: moderateScale(10),
+    backgroundColor: "white",
+    marginHorizontal: scale(24),
+    borderBottomLeftRadius: moderateScale(18),
+    borderBottomRightRadius: moderateScale(18),
+  },
+
+  itemContainer: {
+    paddingHorizontal: scale(12),
+    paddingVertical: 5,
+  },
+
+  itemText: {
+    fontSize: textScale(14),
+    fontFamily: "C-Bold",
+    color: colors.black,
+    fontWeight: "500",
+    paddingTop: verticalScale(10),
+  },
+  containerStyle: {
+    marginTop: verticalScale(10),
+    width: moderateScale(150),
+    marginHorizontal: 0,
+  },
+  containerStyle2: {
+    marginTop: verticalScale(10),
+  },
+  mediaBox: {
+    height: moderateScale(50),
+    width: moderateScale(50),
+    borderRadius: moderateScale(7),
+    backgroundColor: colors.white,
+    marginTop: verticalScale(10),
+    marginLeft: scale(5),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  submitButton: {
+    height: moderateScale(50),
+    marginHorizontal: scale(24),
+    borderRadius: moderateScale(21),
+    backgroundColor: colors.navy,
+    marginVertical: verticalScale(20),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  submitText: {
+    color: colors.white,
+    fontSize: textScale(16),
+    fontFamily: "C-Bold",
+  },
+  modalContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: scale(24),
+    paddingVertical: verticalScale(20),
+    borderRadius: moderateScale(18),
+    backgroundColor: colors.white,
+  },
+  layout: {
+    alignItems: "center",
+  },
+  textStyle: {
+    fontSize: textScale(14),
+    paddingTop: verticalScale(5),
+    fontFamily: "C-Bold",
+    color: colors.black,
+    textAlign: "center",
+  },
+  caseItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: verticalScale(10),
+    backgroundColor: colors.lightPink,
+    marginTop: verticalScale(4),
+  },
+  caseTextStyle: {
+    fontSize: textScale(16),
+    fontWeight: "700",
+    color: colors.black,
+    fontFamily: "C-Regular",
+  },
+  heading: {
+    fontSize: textScale(18),
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  imageStyle: {
+    width: moderateScale(50),
+    height: moderateScale(50),
+    borderRadius: moderateScale(7),
+    marginLeft: scale(5),
+    marginTop: verticalScale(10),
+  },
+  crossIconStyle: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    position: "absolute",
+    right: scale(2),
+    top: verticalScale(12),
+    zIndex: 1,
+  },
+  searchbarStyle: {
+    width: scale(330),
+    height: verticalScale(42),
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  searchIcon: {
+    width: moderateScale(40),
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  inputStyle: {
+    width: scale(250),
+    paddingHorizontal: scale(5),
+    color: colors.black,
+    fontSize: textScale(14),
+    fontFamily: "C-Regular",
+  },
+  details: {
+    marginHorizontal: scale(24),
+    marginTop: verticalScale(10),
+  },
+  oneTextStyle: {
+    fontSize: textScale(18),
+    fontFamily: "C-Bold",
+    color: colors.black,
+    paddingTop: verticalScale(10),
+  },
+  detailsLines: {
+    width: moderateScale(350),
+    padding: moderateScale(8),
+    borderRadius: moderateScale(10),
+    backgroundColor: colors.secondary,
+    alignSelf: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    marginTop: verticalScale(10),
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  activityIndicatorCont: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.white,
+  },
+  filterButton: {
+    paddingVertical: 10,
+  },
+  filterText: {
+    fontSize: 18,
+  },
+  modalContent: {
+    backgroundColor: colors.white,
+    borderRadius: moderateScale(18),
+    padding: 10,
+  },
+  modalContainer2: {
+    height: verticalScale(500),
+    backgroundColor: colors.white,
+    borderRadius: moderateScale(12),
+  },
+  closeButton2: {
+    position: "absolute",
+    top: verticalScale(20),
+    right: scale(30),
+    zIndex: 1,
+  },
+  closeButtonText: {
+    color: colors.black,
+    fontSize: textScale(16),
+  },
+  mediaScrollView: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  mediaContainer: {
+    marginRight: scale(10),
+  },
+  mediaImage: {
+    width: Dimensions.get("window").width * 0.8,
+    height: Dimensions.get("window").width * 0.8,
+    borderRadius: moderateScale(18),
+  },
+  mediaVideo: {
+    width: Dimensions.get("window").width * 0.8,
+    height: Dimensions.get("window").width * 0.8,
+    borderRadius: moderateScale(18),
+  },
+});
+
+export default styles;
